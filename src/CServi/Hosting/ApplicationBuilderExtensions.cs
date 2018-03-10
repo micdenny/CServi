@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ConsoleNetCoreService.Hosting
+namespace CServi.Hosting
 {
     public static class ApplicationBuilderExtensions
     {

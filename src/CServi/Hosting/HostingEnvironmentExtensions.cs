@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleNetCoreService.Hosting
+namespace CServi.Hosting
 {
     /// <summary>
     /// Extension methods for <see cref="IHostingEnvironment"/>.

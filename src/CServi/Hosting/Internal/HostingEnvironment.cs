@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ConsoleNetCoreService.Hosting.Internal
+namespace CServi.Hosting.Internal
 {
     public class HostingEnvironment : IHostingEnvironment
     {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleNetCoreService.Hosting
+﻿namespace CServi.Hosting
 {
     /// <summary>
     /// Provides information about the web hosting environment an application is running in.

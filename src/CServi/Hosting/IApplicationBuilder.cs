@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ConsoleNetCoreService.Hosting
+namespace CServi.Hosting
 {
     /// <summary>
     /// Defines a class that provides the mechanisms to configure an application's request pipeline.

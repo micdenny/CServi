@@ -1,6 +1,6 @@
-﻿using ConsoleNetCoreService.Hosting;
+﻿using CServi.Hosting;
 
-namespace ConsoleNetCoreService
+namespace CServi
 {
     public class Program
     {

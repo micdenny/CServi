@@ -3,7 +3,7 @@ using System.Threading;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace ConsoleNetCoreService.Hosting.Internal
+namespace CServi.Hosting.Internal
 {
     public class ConsoleHost : IConsoleHost
     {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleNetCoreService.Hosting
+﻿namespace CServi.Hosting
 {
     public interface IApplicationService
     {

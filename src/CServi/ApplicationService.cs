@@ -1,9 +1,9 @@
 ﻿using System.Threading;
-using ConsoleNetCoreService.Hosting;
+using CServi.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace ConsoleNetCoreService
+namespace CServi
 {
     public class ApplicationService : IApplicationService
     {

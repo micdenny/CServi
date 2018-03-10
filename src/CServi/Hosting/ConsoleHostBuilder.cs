@@ -1,6 +1,6 @@
-﻿using ConsoleNetCoreService.Hosting.Internal;
+﻿using CServi.Hosting.Internal;
 
-namespace ConsoleNetCoreService.Hosting
+namespace CServi.Hosting
 {
     public interface IConsoleHostBuilder
     {

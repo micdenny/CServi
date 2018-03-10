@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace ConsoleNetCoreService.Hosting.Internal
+namespace CServi.Hosting.Internal
 {
     /// <summary>
     /// Allows consumers to perform cleanup during a graceful shutdown.

@@ -1,4 +1,4 @@
-﻿namespace ConsoleNetCoreService.Hosting
+﻿namespace CServi.Hosting
 {
     /// <summary>
     /// Commonly used environment names.

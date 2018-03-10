@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace ConsoleNetCoreService.Hosting
+namespace CServi.Hosting
 {
     /// <summary>
     /// Allows consumers to perform cleanup during a graceful shutdown.
