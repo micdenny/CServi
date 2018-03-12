@@ -1,9 +1,9 @@
-﻿using System.Threading;
-using CServi.Hosting;
+﻿using CServi.Hosting;
+using System.Threading;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace CServi
+namespace NetCoreSample
 {
     public class ApplicationService : IApplicationService
     {

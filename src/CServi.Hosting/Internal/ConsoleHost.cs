@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 using System.Threading;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -22,7 +24,7 @@ namespace CServi.Hosting.Internal
             services.AddSingleton<IApplicationBuilder, ApplicationBuilder>();
             services.AddLogging();
 
-            var startup = new Startup(env);
+            IStartup startup = FindAndConstructStartupViaReflection(env);
 
             startup.ConfigureServices(services);
 
@@ -78,6 +80,30 @@ namespace CServi.Hosting.Internal
             (_serviceProvider as IDisposable)?.Dispose();
             _applicationLifetime?.NotifyStopped();
             _logger.LogInformation("Host stopped!");
+        }
+
+        private IStartup FindAndConstructStartupViaReflection(IHostingEnvironment env)
+        {
+            var startupType = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(s => s.GetTypes())
+                .FirstOrDefault(t => t.GetInterfaces().Contains(typeof(IStartup)));
+
+            if (startupType == null)
+                throw new Exception($"No class implementing {nameof(IStartup)} found");
+
+            var constructorWithEnvironmentPar = startupType.GetConstructor(new Type[] { typeof(IHostingEnvironment) });
+            if (constructorWithEnvironmentPar != null)
+            {
+                return (IStartup)constructorWithEnvironmentPar.Invoke(new object[] { env });
+            }
+
+            var defaultConstructor = startupType.GetConstructor(Type.EmptyTypes);
+            if (defaultConstructor != null)
+            {
+                return (IStartup)defaultConstructor.Invoke(null);
+            }
+
+            throw new Exception($"{startupType} doesn't have one of the expected constructors");
         }
     }
 }

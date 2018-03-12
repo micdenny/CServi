@@ -1,6 +1,6 @@
 ﻿using CServi.Hosting;
 
-namespace CServi
+namespace NetCoreSample
 {
     public class Program
     {

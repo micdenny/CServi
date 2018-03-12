@@ -9,6 +9,8 @@ namespace CServi.Hosting
 
     public class ConsoleHostBuilder : IConsoleHostBuilder
     {
+
+
         public IConsoleHost Build()
         {
             var host = new ConsoleHost();

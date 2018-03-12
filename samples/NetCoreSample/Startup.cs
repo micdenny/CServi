@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace CServi
+namespace NetCoreSample
 {
-    public class Startup
+    public class Startup : IStartup
     {
         public Startup(IHostingEnvironment env)
         {
@@ -38,3 +38,4 @@ namespace CServi
         }
     }
 }
+
